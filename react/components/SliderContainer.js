@@ -71,12 +71,18 @@ class SliderContainerComponent extends PureComponent {
       children,
       tag: RootTag,
       innerRef,
+      autoplay,
+      autoplayInterval,
+      onNextSlide,
+      pauseOnHover,
       ...otherProps
     } = this.props
 
     return (
       <RootTag
         ref={innerRef}
+        autoPlay={autoplay}
+        autoplayinterval={autoplayInterval}
         className={classnames(className, 'relative')}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
